@@ -1,16 +1,23 @@
+import { Link, Route, Routes } from 'react-router-dom';
+import About from './pages/About';
+import Blogpage from './pages/Blogpage';
+import Home from './pages/Home';
+import Notfoundpages from './pages/Notfoundpages';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <header>
+        <Link to="/"></Link>
+        <Link to="/posts"></Link>
+        <Link to="/about"></Link>
+      </header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/post" element={<Blogpage />} />
+        <Route path="*" element={<Notfoundpages />} />
+      </Routes>
+    </>
   );
 };
