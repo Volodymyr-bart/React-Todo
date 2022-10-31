@@ -13,3 +13,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  display: block;
+  margin: 100px auto;
+  padding: 20px;
+  width: fit-content;
+  height: fit-content;
+  background-color: bisque;
+}
+.List-Todos {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+  margin: 0 auto;
+  padding: 20px;
+  min-width: 250px;
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(108, 178, 236);
+}
+.Todos-text {
+  margin: 0 10px;
+}
+
+.List-Todos__item {
+  background-color: aquamarine;
+  padding: 10px;
+}
+
+inpun:checked + span {
+  background-color: brown;
+  text-decoration: line-through;
+}
